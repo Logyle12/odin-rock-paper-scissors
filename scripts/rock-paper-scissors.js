@@ -25,12 +25,16 @@ function getHumanChoice() {
     else if (!humanChoice.localeCompare("Paper", undefined, {sensitivity: 'base'})) {
         return humanChoice;
     }
+    
+    else if (!humanChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'})) {
+        return humanChoice;
+    }
 
     else {
-        return humanChoice;
+        return alert("Please Enter A Valid Choice!");
     }
 }
 
 function playRound(humanChoice, computerChoice) {
-    
+
 }
