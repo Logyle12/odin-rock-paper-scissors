@@ -46,7 +46,8 @@ let computerScore = 0;
 function playRound(humanChoice, computerChoice) {
     // Check if the choices are the same, indicating a tie
     if (!humanChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
-        return "It's a Tie!"; // Return a tie message
+        console.log("It's a Tie!");
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return a tie message
     }
     // Check if the human wins with Rock against Scissors
     else if (humanChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0 && 
