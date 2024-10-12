@@ -87,4 +87,20 @@ function playMultipleRounds(n) {
         console.log(`Human: ${humanSelection} \nComputer: ${computerSelection}`);
         console.log(playRound(humanSelection, computerSelection));   // Call playRound for each iteration
     }
+
+    if (humanScore == computerScore) {
+        console.log(`Final Score Is:\n Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`); 
+        return "You Tied!\n";
+    }
+
+    else if (humanScore > computerScore) {
+        console.log(`Final Score Is:\n Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
+        return "Congratulations! You Win!\n"; 
+        
+    }
+
+    else {
+        console.log(`Final Score Is:\n Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
+        return "The Computer Wins!\n";
+    }
 }
