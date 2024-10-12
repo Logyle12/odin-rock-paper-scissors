@@ -38,4 +38,9 @@ function getHumanChoice() {
 function playRound(humanChoice, computerChoice) {
     let humanScore = 0;
     let computerScore = 0;
+
+    if (!humanChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
+        return "It's a Tie!";
+    }
+
 }
