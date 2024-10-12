@@ -1,75 +1,82 @@
+// Function to randomly select the computer's choice in the game
 function getComputerChoice() {
+    // Generate a random number between 0 and 2
     let computerChoice = Math.round(Math.random() * 2);
 
+    // Map the random number to the corresponding choice
     if (computerChoice == 0) {
-        return "Rock";
+        return "Rock"; // Return "Rock" for 0
     }
-
     else if (computerChoice == 1) {
-        return "Paper";
+        return "Paper"; // Return "Paper" for 1
     }
-
     else {
-        return "Scissors"
+        return "Scissors"; // Return "Scissors" for 2
     }
-
 }
 
+// Function to get the player's choice
 function getHumanChoice() {
+    // Prompt the user for their choice
     let humanChoice = prompt("Please enter your choice: Rock, Paper, or Scissors:");
 
+    // Check if the user's input is "Rock" (case insensitive)
     if (!humanChoice.localeCompare("Rock", undefined, {sensitivity: 'base'})) {
-        return humanChoice;
+        return humanChoice; // Return the choice if valid
     }
-
+    // Check if the user's input is "Paper" (case insensitive)
     else if (!humanChoice.localeCompare("Paper", undefined, {sensitivity: 'base'})) {
-        return humanChoice;
+        return humanChoice; // Return the choice if valid
     }
-    
+    // Check if the user's input is "Scissors" (case insensitive)
     else if (!humanChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'})) {
-        return humanChoice;
+        return humanChoice; // Return the choice if valid
     }
-
+    // Alert the user if the input is invalid
     else {
-        return alert("Please Enter A Valid Choice!");
+        return alert("Please Enter A Valid Choice!"); 
     }
 }
 
+// Variables to keep track of the human and computer scores
 let humanScore = 0;
 let computerScore = 0;
 
+// Function to play a round of the game
 function playRound(humanChoice, computerChoice) {
-
+    // Check if the choices are the same, indicating a tie
     if (!humanChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
-        return "It's a Tie!";
+        return "It's a Tie!"; // Return a tie message
     }
-
+    // Check if the human wins with Rock against Scissors
     else if (humanChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0 && 
-    computerChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0) {
-        humanScore++;
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`;
+             computerChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0) {
+        humanScore++; // Increment human score
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
     }
-
+    // Check if the human wins with Paper against Rock
     else if (humanChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0 && 
-    computerChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0) {
-        humanScore++;
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`;
+             computerChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0) {
+        humanScore++; // Increment human score
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
     }
-
+    // Check if the human wins with Scissors against Paper
     else if (humanChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0 && 
-    computerChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0) {
-        humanScore++;
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`;
+             computerChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0) {
+        humanScore++; // Increment human score
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
     }
-
+    // If none of the above conditions are met, the computer wins
     else {
-        computerScore++;
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`;
+        computerScore++; // Increment computer score
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
     }
 }
 
+// Function to play multiple rounds of the game
 function playMultipleRounds(n, humanChoice, computerChoice) {
+    // Loop n times to play n rounds
     for (let index = 0; index < n; index++) {
-        playRound(humanChoice, computerChoice);      
+        playRound(humanChoice, computerChoice); // Call playRound for each iteration
     }
 }
