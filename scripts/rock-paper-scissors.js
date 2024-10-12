@@ -53,18 +53,21 @@ function playRound(humanChoice, computerChoice) {
     else if (humanChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0 && 
              computerChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0) {
         humanScore++; // Increment human score
+        console.log("Human Wins!");
         return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
     }
     // Check if the human wins with Paper against Rock
     else if (humanChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0 && 
              computerChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0) {
         humanScore++; // Increment human score
+        console.log("Human Wins!");
         return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
     }
     // Check if the human wins with Scissors against Paper
     else if (humanChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0 && 
              computerChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0) {
         humanScore++; // Increment human score
+        console.log("Human Wins!");
         return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
     }
     // If none of the above conditions are met, the computer wins
