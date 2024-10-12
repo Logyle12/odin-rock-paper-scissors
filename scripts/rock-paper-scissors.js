@@ -73,6 +73,7 @@ function playRound(humanChoice, computerChoice) {
     // If none of the above conditions are met, the computer wins
     else {
         computerScore++; // Increment computer score
+        console.log("Computer Wins!");
         return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
     }
 }
