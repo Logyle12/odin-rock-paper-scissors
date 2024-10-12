@@ -79,6 +79,7 @@ function playMultipleRounds(n) {
     for (let index = 0; index < n; index++) {
         let humanSelection = getHumanChoice();
         let computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection); // Call playRound for each iteration
+        console.log(`Human: ${humanSelection} \nComputer: ${computerSelection}`);
+        console.log(playRound(humanSelection, computerSelection));   // Call playRound for each iteration
     }
 }
