@@ -17,4 +17,16 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     let humanChoice = Number(prompt("Enter 0 for Rock, 1 for Paper, or 2 for Scissors:"));
+
+    if (humanChoice == 0) {
+        return "Rock";
+    }
+
+    else if (humanChoice == 1) {
+        return "Paper";
+    }
+
+    else {
+        return "Scissors";
+    }
 }
