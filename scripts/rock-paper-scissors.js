@@ -47,34 +47,34 @@ function playRound(humanChoice, computerChoice) {
     // Check if the choices are the same, indicating a tie
     if (!humanChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
         console.log("It's a Tie!");
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return a tie message
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`; // Return a tie message
     }
     // Check if the human wins with Rock against Scissors
     else if (humanChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0 && 
              computerChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0) {
         humanScore++; // Increment human score
         console.log("Human Wins!");
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`; // Return the score
     }
     // Check if the human wins with Paper against Rock
     else if (humanChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0 && 
              computerChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0) {
         humanScore++; // Increment human score
         console.log("Human Wins!");
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`; // Return the score
     }
     // Check if the human wins with Scissors against Paper
     else if (humanChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0 && 
              computerChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0) {
         humanScore++; // Increment human score
         console.log("Human Wins!");
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`; // Return the score
     }
     // If none of the above conditions are met, the computer wins
     else {
         computerScore++; // Increment computer score
         console.log("Computer Wins!");
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`; // Return the score
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`; // Return the score
     }
 }
 
