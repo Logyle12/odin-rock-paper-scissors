@@ -18,16 +18,16 @@ function getComputerChoice() {
 function getHumanChoice() {
     let humanChoice = prompt("Please enter your choice: Rock, Paper, or Scissors:");
 
-    if (humanChoice == 0) {
-        return "Rock";
+    if (!humanChoice.localeCompare("Rock", undefined, {sensitivity: 'base'})) {
+        return humanChoice;
     }
 
-    else if (humanChoice == 1) {
-        return "Paper";
+    else if (!humanChoice.localeCompare("Paper", undefined, {sensitivity: 'base'})) {
+        return humanChoice;
     }
 
     else {
-        return "Scissors";
+        return humanChoice;
     }
 }
 
