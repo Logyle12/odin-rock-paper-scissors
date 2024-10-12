@@ -1,5 +1,5 @@
 function getComputerChoice() {
-    let computerChoice = Math.floor(Math.random() * 2);
+    let computerChoice = Math.round(Math.random() * 2);
 
     if (computerChoice == 0) {
         return "Rock";
