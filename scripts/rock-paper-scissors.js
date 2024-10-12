@@ -66,6 +66,10 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
         return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`;
     }
+}
 
-
+function playMultipleRounds(n, humanChoice, computerChoice) {
+    for (let index = 0; index < n; index++) {
+        playRound(humanChoice, computerChoice);      
+    }
 }
