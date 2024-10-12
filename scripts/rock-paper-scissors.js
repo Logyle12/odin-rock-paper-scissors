@@ -89,18 +89,18 @@ function playMultipleRounds(n) {
     }
 
     if (humanScore == computerScore) {
-        console.log(`Final Score Is:\n Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`); 
+        console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`); 
         return "You Tied!\n";
     }
 
     else if (humanScore > computerScore) {
-        console.log(`Final Score Is:\n Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
+        console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
         return "Congratulations! You Win!\n"; 
         
     }
 
     else {
-        console.log(`Final Score Is:\n Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
+        console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
         return "The Computer Wins!\n";
     }
 }
