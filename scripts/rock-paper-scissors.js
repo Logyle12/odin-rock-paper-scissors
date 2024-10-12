@@ -43,4 +43,28 @@ function playRound(humanChoice, computerChoice) {
         return "It's a Tie!";
     }
 
+    else if (humanChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0 && 
+    computerChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0) {
+        humanScore++;
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`;
+    }
+
+    else if (humanChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0 && 
+    computerChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0) {
+        humanScore++;
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`;
+    }
+
+    else if (humanChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0 && 
+    computerChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0) {
+        humanScore++;
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`;
+    }
+
+    else {
+        computerScore++;
+        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}`;
+    }
+
+
 }
