@@ -101,6 +101,14 @@ function playGame(n) {
 
     // Check if the human player has a higher score
     else if (humanScore > computerScore) {
+
+        if (humanScore == n) {
+            // Output the final score and the winning result
+            console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
+            
+            return "A Perfect Score! The Machine Never Stood a Chance!";
+        }
+
         // Output the final score and the winning result
         console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
         return "Humanity Prevails! Take a Bow, Champion!\n"; 
