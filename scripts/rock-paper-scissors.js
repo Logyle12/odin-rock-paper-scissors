@@ -80,27 +80,37 @@ function playRound(humanChoice, computerChoice) {
 
 // Function to play multiple rounds of the game
 function playGame(n) {
-    // Loop n times to play n rounds
+    // Loop n times to play n rounds of the game
     for (let index = 0; index < n; index++) {
+        // Get the human player's choice
         let humanSelection = getHumanChoice();
+        // Get the computer's choice (randomized)
         let computerSelection = getComputerChoice();
+        // Output both selections to the console
         console.log(`Human: ${humanSelection} \nComputer: ${computerSelection}`);
-        console.log(playRound(humanSelection, computerSelection));   // Call playRound for each iteration
+        // Play one round with the current selections and output the result
+        console.log(playRound(humanSelection, computerSelection));   
     }
 
+    // Check if the final score is a tie
     if (humanScore == computerScore) {
+        // Output the final score and the tie result
         console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`); 
         return "You Tied!\n";
     }
 
+    // Check if the human player has a higher score
     else if (humanScore > computerScore) {
+        // Output the final score and the winning result
         console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
         return "Congratulations! You Win!\n"; 
-        
     }
 
+    // Otherwise, the computer wins
     else {
+        // Output the final score and the losing result
         console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
         return "The Computer Wins!\n";
     }
 }
+
