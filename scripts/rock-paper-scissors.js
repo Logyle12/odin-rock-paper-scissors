@@ -96,6 +96,11 @@ function playGame() {
     // Prompt the user for the number of rounds
     let n = Number(prompt("How many rounds would you like to play?"));
 
+    // Validate the input for the number of rounds
+    while (isNaN(n) || n <= 0) {
+        n = parseInt(prompt("Please enter a valid number of rounds:"), 10);
+    }
+    
     // Loop n times to play n rounds of the game
     for (let index = 0; index < n; index++) {
         // Get the human player's choice
