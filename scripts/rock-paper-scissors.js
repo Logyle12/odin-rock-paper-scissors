@@ -79,7 +79,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // Function to play multiple rounds of the game
-function playMultipleRounds(n) {
+function playGame(n) {
     // Loop n times to play n rounds
     for (let index = 0; index < n; index++) {
         let humanSelection = getHumanChoice();
