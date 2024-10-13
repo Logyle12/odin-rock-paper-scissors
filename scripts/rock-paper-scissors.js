@@ -96,21 +96,21 @@ function playGame(n) {
     if (humanScore == computerScore) {
         // Output the final score and the tie result
         console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`); 
-        return "You Tied!\n";
+        return "It's a draw! Great minds think alike, huh?\n";
     }
 
     // Check if the human player has a higher score
     else if (humanScore > computerScore) {
         // Output the final score and the winning result
         console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
-        return "Congratulations! You Win!\n"; 
+        return "Humanity prevails! Take a bow, champion!\n"; 
     }
 
     // Otherwise, the computer wins
     else {
         // Output the final score and the losing result
         console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
-        return "The Computer Wins!\n";
+        return "The computer takes this one! Time to sharpen your skills!\n";
     }
 }
 
