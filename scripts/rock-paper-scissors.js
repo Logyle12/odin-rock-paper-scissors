@@ -91,13 +91,19 @@ function playRound(humanChoice, computerChoice) {
 }
 
 // Function to play multiple rounds of the game
-function playGame(n) {
+function playGame() {
+
+    // Prompt the user for the number of rounds
+    let n = Number(prompt("How many rounds would you like to play?"));
+
     // Loop n times to play n rounds of the game
     for (let index = 0; index < n; index++) {
         // Get the human player's choice
         const humanSelection = getHumanChoice();
         // Get the computer's choice (randomized)
         const computerSelection = getComputerChoice();
+         // Output the round to the console
+        console.log(`Round ${index + 1}`);
         // Output both selections to the console
         console.log(`Human: ${humanSelection} \nComputer: ${computerSelection}`);
         // Play one round with the current selections and output the result
