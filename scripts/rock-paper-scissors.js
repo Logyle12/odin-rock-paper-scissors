@@ -101,11 +101,12 @@ function playGame(n) {
 
     // Check if the human player has a higher score
     else if (humanScore > computerScore) {
-
+        // Check if the human player achieved a perfect score (winning all rounds)
         if (humanScore == n) {
             // Output the final score and the winning result
             console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
             
+            // Return a special message indicating the human's flawless victory
             return "A Perfect Score! The Machine Never Stood a Chance!";
         }
 
