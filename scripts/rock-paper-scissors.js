@@ -34,7 +34,16 @@ function getHumanChoice() {
     }
     // Alert the user if the input is invalid
     else {
-        return alert("Please Enter A Valid Choice!"); 
+
+        while (!(humanChoice.localeCompare("Rock", undefined, { sensitivity: 'base' }) == 0 || 
+               humanChoice.localeCompare("Paper", undefined, { sensitivity: 'base' }) == 0 || 
+               humanChoice.localeCompare("Scissors", undefined, { sensitivity: 'base' }) == 0)) {
+            
+            console.log("Invalid choice. Please try again.");
+            humanChoice = prompt("Please enter your choice: Rock, Paper, or Scissors:");
+        }
+
+        return humanChoice;   
     }
 }
 
