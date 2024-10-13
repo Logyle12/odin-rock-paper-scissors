@@ -83,9 +83,9 @@ function playGame(n) {
     // Loop n times to play n rounds of the game
     for (let index = 0; index < n; index++) {
         // Get the human player's choice
-        let humanSelection = getHumanChoice();
+        const humanSelection = getHumanChoice();
         // Get the computer's choice (randomized)
-        let computerSelection = getComputerChoice();
+        const computerSelection = getComputerChoice();
         // Output both selections to the console
         console.log(`Human: ${humanSelection} \nComputer: ${computerSelection}`);
         // Play one round with the current selections and output the result
@@ -96,21 +96,21 @@ function playGame(n) {
     if (humanScore == computerScore) {
         // Output the final score and the tie result
         console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`); 
-        return "It's a draw! Great minds think alike, huh?\n";
+        return "It's a Draw! Great Minds Think Alike, huh?\n";
     }
 
     // Check if the human player has a higher score
     else if (humanScore > computerScore) {
         // Output the final score and the winning result
         console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
-        return "Humanity prevails! Take a bow, champion!\n"; 
+        return "Humanity Prevails! Take a Bow, Champion!\n"; 
     }
 
     // Otherwise, the computer wins
     else {
         // Output the final score and the losing result
         console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
-        return "The computer takes this one! Time to sharpen your skills!\n";
+        return "The Computer Takes This One! Time to Sharpen Your Skills!\n";
     }
 }
 
