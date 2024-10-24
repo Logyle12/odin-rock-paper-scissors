@@ -49,7 +49,10 @@ body {
 }
 
 
-
+.action-button {
+    width: 198px;
+    height: 203px;
+}
 
 
 
