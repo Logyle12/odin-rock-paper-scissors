@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'Bobby Jones Soft'; /* Name of your font */
+    src: url('../fonts/Bobby\ Jones\ Soft.otf') format('opentype'); /* OTF format */
+}
+
+
 body {
     background: radial-gradient(134.34% 134.34% at 50% 0%, #1f4c87 0%, #1c1f56 100%);
     color: #FFFFFF;
@@ -13,6 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .game-header {
@@ -21,6 +28,7 @@ body {
     width: 700px;
     height: 100px;
     margin-top: 48px;
+    font-family: 'Bobby Jones Soft';
 }
 
 .game-header h1 {
