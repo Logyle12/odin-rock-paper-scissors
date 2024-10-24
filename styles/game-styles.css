@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-
+body {
+    background: radial-gradient(134.34% 134.34% at 50% 0%, #1f4c87 0%, #1c1f56 100%);
+}
 
 
 
