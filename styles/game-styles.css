@@ -51,6 +51,7 @@ body {
 .action-button {
     width: 198px;
     height: 203px;
+    z-index: 2;
 }
 
 .path {
