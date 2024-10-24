@@ -45,18 +45,18 @@ body {
     height: 430px;
     margin-top: 72px;
     margin-bottom: 72px;
-    gap: 16px 32px;
+    gap: 32px 64px;
 }
 
 .action-button {
-    width: 198px;
-    height: 203px;
+    width: 178px;
+    height: 183px;
     z-index: 2;
 }
 
 .path {
-    width: 360px;
-    height: 290px;
+    width: 320px;
+    height: 250px;
     position: absolute;
 }
 
