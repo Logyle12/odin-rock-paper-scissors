@@ -48,10 +48,14 @@ body {
     gap: 16px 32px;
 }
 
-
 .action-button {
     width: 198px;
     height: 203px;
+}
+
+.path {
+    width: 360px;
+    height: 290px;
 }
 
 
