@@ -45,8 +45,9 @@ body {
     height: 430px;
     margin-top: 72px;
     margin-bottom: 72px;
-        
+    gap: 16px 32px;
 }
+
 
 
 
