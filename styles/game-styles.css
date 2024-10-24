@@ -14,7 +14,10 @@ body {
     align-items: center;
 }
 
-
+.game-header {
+    display: flex;
+    justify-content: space-between;
+}
 
 
 
