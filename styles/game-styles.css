@@ -6,7 +6,7 @@
 
 @font-face {
     font-family: 'Bobby Jones Soft'; /* Name of your font */
-    src: url('../fonts/Bobby\ Jones\ Soft.otf') format('opentype'); /* OTF format */
+    src: url('../fonts/BarlowSemiCondensed-Bold.ttf') format('truetype'); /* TTF format */
 }
 
 
