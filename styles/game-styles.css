@@ -33,6 +33,7 @@ body {
 .game-header h1 {
     width: 156px;
     height: 93px;
+    line-height: 1.15;
 }
 
 .scoreboard {
