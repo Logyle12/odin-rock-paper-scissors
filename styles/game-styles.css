@@ -40,9 +40,12 @@ body {
 
 .scoreboard {
     display: flex;
-    width: 150px;
+    width: 125px;
     align-items: baseline;
     justify-content: center;
+    background-color: whitesmoke;
+    border: 5px solid #565468;
+    border-radius: 10px;
 }
 
 .score-info {
