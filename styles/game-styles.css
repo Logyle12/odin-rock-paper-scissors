@@ -25,6 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 700px;
+    height: 115px;
     margin-top: 48px;
     font-family: 'BarlowSemiCondensed-Bold';
     border: 2px solid #b9b8c262;
@@ -33,7 +34,6 @@ body {
 
 .game-header h1 {
     width: 156px;
-    height: 93px;
     line-height: 1.15;
 }
 
@@ -42,7 +42,6 @@ body {
     flex-direction: column;
     align-items: center;
     width: 150px;
-    height: 114px;
 }
 
 .game-actions {
