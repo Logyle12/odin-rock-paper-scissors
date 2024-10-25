@@ -5,7 +5,7 @@
 }
 
 @font-face {
-    font-family: 'Bobby Jones Soft'; /* Name of your font */
+    font-family: 'BarlowSemiCondensed'; /* Name of your font */
     src: url('../fonts/BarlowSemiCondensed-Bold.ttf') format('truetype'); /* TTF format */
 }
 
@@ -18,8 +18,7 @@ body {
 .game-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center; 
 }
 
 .game-header {
@@ -28,7 +27,7 @@ body {
     width: 700px;
     height: 100px;
     margin-top: 48px;
-    font-family: 'Bobby Jones Soft';
+    font-family: 'BarlowSemiCondensed';
 }
 
 .game-header h1 {
