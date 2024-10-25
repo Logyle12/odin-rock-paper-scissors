@@ -51,6 +51,10 @@ body {
     text-align: center;
 }
 
+.score-value {
+    font-size: 64px;
+}
+
 .game-actions {
     display: flex;
     flex-wrap: wrap;
