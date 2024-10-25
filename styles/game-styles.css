@@ -46,7 +46,7 @@ body {
 }
 
 .score-info {
-    width: 55px;
+    min-width: 65px;
     height: 83px;
     text-align: center;
 }
