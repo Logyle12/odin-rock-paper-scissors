@@ -5,7 +5,7 @@
 }
 
 @font-face {
-    font-family: 'BarlowSemiCondensed'; /* Name of your font */
+    font-family: 'BarlowSemiCondensed-Bold'; /* Name of your font */
     src: url('../fonts/BarlowSemiCondensed-Bold.ttf') format('truetype'); /* TTF format */
 }
 
@@ -27,7 +27,7 @@ body {
     width: 700px;
     height: 100px;
     margin-top: 48px;
-    font-family: 'BarlowSemiCondensed';
+    font-family: 'BarlowSemiCondensed-Bold';
 }
 
 .game-header h1 {
