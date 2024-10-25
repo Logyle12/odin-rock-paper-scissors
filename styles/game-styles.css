@@ -25,11 +25,11 @@ body {
     display: flex;
     justify-content: space-between;
     width: 700px;
-    height: 115px;
     margin-top: 48px;
     font-family: 'BarlowSemiCondensed-Bold';
     border: 2px solid #b9b8c262;
     border-radius: 15px;
+    padding: 20px;
 }
 
 .game-header h1 {
