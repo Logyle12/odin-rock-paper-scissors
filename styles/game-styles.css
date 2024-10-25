@@ -49,9 +49,8 @@ body {
 }
 
 .score-info {
-    min-width: 65px;
-    height: 83px;
     text-align: center;
+    color: #565468;
 }
 
 .score-value {
