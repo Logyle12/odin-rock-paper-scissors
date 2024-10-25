@@ -51,6 +51,7 @@ body {
 .score-info {
     text-align: center;
     color: #565468;
+    padding: 5px 10px;
 }
 
 .score-value {
