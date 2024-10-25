@@ -11,7 +11,7 @@
 
 
 body {
-    background: radial-gradient(134.34% 134.34% at 50% 0%, #1f4c87 0%, #1c1f56 100%);
+    background: linear-gradient(#5160a8, #2f2b5f);
     color: #FFFFFF;
 }
 
