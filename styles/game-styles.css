@@ -45,6 +45,12 @@ body {
     justify-content: center;
 }
 
+.score-info {
+    width: 55px;
+    height: 83px;
+    text-align: center;
+}
+
 .game-actions {
     display: flex;
     flex-wrap: wrap;
