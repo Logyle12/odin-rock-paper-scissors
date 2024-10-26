@@ -26,43 +26,43 @@ function getPlayerChoice() {
     }
 }
 
-// Variables to keep track of the human and computer scores
-let humanScore = 0;
+// Variables to keep track of the player and computer scores
+let playerScore = 0;
 let computerScore = 0;
 
 // Function to play a round of the game
-function playRound(humanChoice, computerChoice) {
+function playRound(playerChoice, computerChoice) {
     // Check if the choices are the same, indicating a tie
-    if (!humanChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
+    if (!playerChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
         console.log("It's a Tie!");
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`; // Return a tie message
+        return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return a tie message
     }
-    // Check if the human wins with Rock against Scissors
-    else if (humanChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0 && 
+    // Check if the player wins with Rock against Scissors
+    else if (playerChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0 && 
              computerChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0) {
-        humanScore++; // Increment human score
-        console.log("Human Wins!");
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`; // Return the score
+        playerScore++; // Increment player score
+        console.log("Player Wins!");
+        return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return the score
     }
-    // Check if the human wins with Paper against Rock
-    else if (humanChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0 && 
+    // Check if the player wins with Paper against Rock
+    else if (playerChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0 && 
              computerChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0) {
-        humanScore++; // Increment human score
-        console.log("Human Wins!");
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`; // Return the score
+        playerScore++; // Increment player score
+        console.log("Player Wins!");
+        return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return the score
     }
-    // Check if the human wins with Scissors against Paper
-    else if (humanChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0 && 
+    // Check if the player wins with Scissors against Paper
+    else if (playerChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0 && 
              computerChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0) {
-        humanScore++; // Increment human score
-        console.log("Human Wins!");
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`; // Return the score
+        playerScore++; // Increment player score
+        console.log("Player Wins!");
+        return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return the score
     }
     // If none of the above conditions are met, the computer wins
     else {
         computerScore++; // Increment computer score
         console.log("Computer Wins!");
-        return `Human Score: ${humanScore} \nComputer Score: ${computerScore}\n`; // Return the score
+        return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return the score
     }
 }
 
@@ -79,45 +79,45 @@ function playGame() {
     
     // Loop n times to play n rounds of the game
     for (let index = 0; index < n; index++) {
-        // Get the human player's choice
-        const humanSelection = getHumanChoice();
-        // Get the computer's choice (randomized)
+        // Get the player's choice
+        const playerSelection = getPlayerChoice();
+        // Get the computer's choice (randomized)git
         const computerSelection = getComputerChoice();
          // Output the round to the console
         console.log(`Round ${index + 1}`);
         // Output both selections to the console
-        console.log(`Human: ${humanSelection} \nComputer: ${computerSelection}`);
+        console.log(`Player: ${playerSelection} \nComputer: ${computerSelection}`);
         // Play one round with the current selections and output the result
-        console.log(playRound(humanSelection, computerSelection));   
+        console.log(playRound(playerSelection, computerSelection));   
     }
 
     // Check if the final score is a tie
-    if (humanScore == computerScore) {
+    if (playerScore == computerScore) {
         // Output the final score and the tie result
-        console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`); 
+        console.log(`Final Score Is:\nPlayer Score: ${playerScore} \nComputer Score: ${computerScore}\n`); 
         return "It's a Draw! Great Minds Think Alike, huh?\n";
     }
 
-    // Check if the human player has a higher score
-    else if (humanScore > computerScore) {
-        // Check if the human player achieved a perfect score (winning all rounds)
-        if (humanScore == n) {
+    // Check if the player has a higher score
+    else if (playerScore > computerScore) {
+        // Check if the player achieved a perfect score (winning all rounds)
+        if (playerScore == n) {
             // Output the final score and the winning result
-            console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
+            console.log(`Final Score Is:\nPlayer Score: ${playerScore} \nComputer Score: ${computerScore}\n`);
             
-            // Return a special message indicating the human's flawless victory
+            // Return a special message indicating the player's flawless victory
             return "A Perfect Score! The Machine Never Stood a Chance!";
         }
 
         // Output the final score and the winning result
-        console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
-        return "Humanity Prevails! Take a Bow, Champion!\n"; 
+        console.log(`Final Score Is:\nPlayer Score: ${playerScore} \nComputer Score: ${computerScore}\n`);
+        return "Victory is Yours! Take a Bow, Champion!\n"; 
     }
 
     // Otherwise, the computer wins
     else {
         // Output the final score and the losing result
-        console.log(`Final Score Is:\nHuman Score: ${humanScore} \nComputer Score: ${computerScore}\n`);
+        console.log(`Final Score Is:\nPlayer Score: ${playerScore} \nComputer Score: ${computerScore}\n`);
         return "The Computer Takes This One! Time to Sharpen Your Skills!\n";
     }
 }
