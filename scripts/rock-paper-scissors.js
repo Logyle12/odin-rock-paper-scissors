@@ -52,6 +52,9 @@ function playRound(playerChoice, computerChoice) {
         incrementScore(computerScore);
         console.log("Computer Wins!");
     }
+    
+    // Return the current scores for the player and computer after determining the round outcome
+    return `Player Score: ${playerScore.textContent} \nComputer Score: ${computerScore.textContent}\n`; 
 
 }
 
