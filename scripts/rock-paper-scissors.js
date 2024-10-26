@@ -16,12 +16,18 @@ function getComputerChoice() {
 }
 
 // Function to get the player's choice
-function getPlayerChoice() {
+function playGame() {
     let playerChoices = document.querySelectorAll('.action-button');
 
     for (const playerChoice of playerChoices) {
         playerChoice.addEventListener("click", (event) => {
-           return event.target.classList[1];
+            const computerSelection = getComputerChoice();
+            const playerSelection = event.target.classList[1];
+
+            // Output both selections to the console
+            console.log(`Player: ${playerSelection} \nComputer: ${computerSelection}`);
+
+            console.log(playRound(playerSelection, computerSelection));
         });
     }
 }
@@ -65,5 +71,3 @@ function playRound(playerChoice, computerChoice) {
         return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return the score
     }
 }
-
-
