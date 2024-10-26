@@ -44,10 +44,12 @@ function playRound(playerChoice, computerChoice) {
         combination[0] === playerChoice && combination[1] === computerChoice
     );
 
-    // Log the result based on the player's win status
+    // Log the winning result based on the player's win status
     if (playerWins) {
+        incrementScore(playerScore);
         console.log("Player Wins!");
     } else {
+        incrementScore(computerScore);
         console.log("Computer Wins!");
     }
 
