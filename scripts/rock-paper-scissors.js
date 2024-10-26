@@ -16,37 +16,13 @@ function getComputerChoice() {
 }
 
 // Function to get the player's choice
-function getHumanChoice() {
-    // Prompt the user for their choice
-    let humanChoice = prompt("Please enter your choice: Rock, Paper, or Scissors:");
+function getPlayerChoice() {
+    let playerChoices = document.querySelectorAll('.action-button');
 
-    // Check if the user's input is "Rock" (case insensitive)
-    if (!humanChoice.localeCompare("Rock", undefined, {sensitivity: 'base'})) {
-        return humanChoice; // Return the choice if valid
-    }
-    // Check if the user's input is "Paper" (case insensitive)
-    else if (!humanChoice.localeCompare("Paper", undefined, {sensitivity: 'base'})) {
-        return humanChoice; // Return the choice if valid
-    }
-    // Check if the user's input is "Scissors" (case insensitive)
-    else if (!humanChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'})) {
-        return humanChoice; // Return the choice if valid
-    }
-    // Otherwise the input is invalid
-    else {
-        // Continue prompting the user until a valid choice is entered
-        while (!(humanChoice.localeCompare("Rock", undefined, { sensitivity: 'base' }) == 0 || 
-               humanChoice.localeCompare("Paper", undefined, { sensitivity: 'base' }) == 0 || 
-               humanChoice.localeCompare("Scissors", undefined, { sensitivity: 'base' }) == 0)) {
-
-            // Log an error message to the console for invalid choices
-            console.log("Invalid choice. Please try again.");
-
-            // Prompt the user for their choice again
-            humanChoice = prompt("Please enter your choice: Rock, Paper, or Scissors:");
-        }
-
-        return humanChoice; // Return the choice if valid
+    for (const playerChoice of playerChoices) {
+        playerChoice.addEventListener("click", (event) => {
+            return event.target;
+        });
     }
 }
 
