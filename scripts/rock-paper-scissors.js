@@ -41,7 +41,7 @@ function playRound(playerChoice, computerChoice) {
 
     // Check if the player wins
     const playerWins = winningCombinations.some(combination =>
-        combination[0] === playerChoice && combination[1] === computerChoice
+        combination[0].toLocaleLowerCase() === playerChoice && combination[1] === computerChoice
     );
 
     // Log the winning result based on the player's win status
