@@ -44,4 +44,11 @@ function playRound(playerChoice, computerChoice) {
         return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return a tie message
     }
 
+    // Define winning combinations as arrays
+    const winningCombinations = [
+        ["Rock", "Scissors"],
+        ["Paper", "Rock"],
+        ["Scissors", "Paper"]
+    ];
+
 }
