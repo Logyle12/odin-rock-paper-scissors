@@ -74,3 +74,5 @@ function playGame() {
         });
     }
 }
+
+playGame();
