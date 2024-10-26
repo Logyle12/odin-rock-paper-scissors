@@ -15,6 +15,10 @@ function getComputerChoice() {
     }
 }
 
+// Increment the score by 1 and update the displayed text content
+function incrementScore(score) {
+    score.textContent = parseInt(score.textContent) + 1;
+}
 
 // Function to play a round of the game
 function playRound(playerChoice, computerChoice) {
