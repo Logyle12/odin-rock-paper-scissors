@@ -43,31 +43,5 @@ function playRound(playerChoice, computerChoice) {
         console.log("It's a Tie!");
         return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return a tie message
     }
-    // Check if the player wins with Rock against Scissors
-    else if (playerChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0 && 
-             computerChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0) {
-        playerScore++; // Increment player score
-        console.log("Player Wins!");
-        return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return the score
-    }
-    // Check if the player wins with Paper against Rock
-    else if (playerChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0 && 
-             computerChoice.localeCompare("Rock", undefined, {sensitivity: 'base'}) == 0) {
-        playerScore++; // Increment player score
-        console.log("Player Wins!");
-        return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return the score
-    }
-    // Check if the player wins with Scissors against Paper
-    else if (playerChoice.localeCompare("Scissors", undefined, {sensitivity: 'base'}) == 0 && 
-             computerChoice.localeCompare("Paper", undefined, {sensitivity: 'base'}) == 0) {
-        playerScore++; // Increment player score
-        console.log("Player Wins!");
-        return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return the score
-    }
-    // If none of the above conditions are met, the computer wins
-    else {
-        computerScore++; // Increment computer score
-        console.log("Computer Wins!");
-        return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return the score
-    }
+
 }
