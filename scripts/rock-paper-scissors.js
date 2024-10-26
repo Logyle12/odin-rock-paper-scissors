@@ -28,8 +28,8 @@ function playRound(playerChoice, computerChoice) {
     
     // Check if the choices are the same, indicating a tie
     if (!playerChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
-        console.log("It's a Tie!");
-        return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return a tie message
+        console.log("It's a Tie!"); 
+        return `Player Score: ${playerScore.textContent} \nComputer Score: ${computerScore.textContent}\n`; 
     }
     
     // Define winning combinations as arrays
