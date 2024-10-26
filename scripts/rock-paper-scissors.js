@@ -56,4 +56,12 @@ function playRound(playerChoice, computerChoice) {
         combination[0] === playerChoice && combination[1] === computerChoice
     );
 
+    // Log the result based on the player's win status
+    if (playerWins) {
+        console.log("Player Wins!");
+    } else {
+        console.log("Computer Wins!");
+    }
+
+
 }
