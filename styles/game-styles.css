@@ -35,7 +35,11 @@ body {
 }
 
 .game-header h1 {
-    width: 156px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .scoreboard {
