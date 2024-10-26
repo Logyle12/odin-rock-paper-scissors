@@ -21,7 +21,7 @@ function getPlayerChoice() {
 
     for (const playerChoice of playerChoices) {
         playerChoice.addEventListener("click", (event) => {
-            return event.target;
+           return event.target.classList[1];
         });
     }
 }
