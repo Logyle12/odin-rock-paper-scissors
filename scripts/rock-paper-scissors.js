@@ -32,12 +32,12 @@ function playGame() {
     }
 }
 
-// Variables to keep track of the player and computer scores
-let playerScore = 0;
-let computerScore = 0;
-
 // Function to play a round of the game
 function playRound(playerChoice, computerChoice) {
+    // Variables to keep track of the player and computer scores
+    let playerScore = document.querySelector('.player-score');
+    let computerScore = document.querySelector('.computer-score');
+
     // Check if the choices are the same, indicating a tie
     if (!playerChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
         console.log("It's a Tie!");
@@ -62,6 +62,5 @@ function playRound(playerChoice, computerChoice) {
     } else {
         console.log("Computer Wins!");
     }
-
 
 }
