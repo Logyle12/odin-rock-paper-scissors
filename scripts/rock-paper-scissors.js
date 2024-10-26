@@ -51,4 +51,9 @@ function playRound(playerChoice, computerChoice) {
         ["Scissors", "Paper"]
     ];
 
+    // Check if the player wins
+    const playerWins = winningCombinations.some(combination =>
+        combination[0] === playerChoice && combination[1] === computerChoice
+    );
+
 }
