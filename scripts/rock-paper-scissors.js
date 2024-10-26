@@ -15,35 +15,19 @@ function getComputerChoice() {
     }
 }
 
-// Function to get the player's choice
-function playGame() {
-    let playerChoices = document.querySelectorAll('.action-button');
-
-    for (const playerChoice of playerChoices) {
-        playerChoice.addEventListener("click", (event) => {
-            const computerSelection = getComputerChoice();
-            const playerSelection = event.target.classList[1];
-
-            // Output both selections to the console
-            console.log(`Player: ${playerSelection} \nComputer: ${computerSelection}`);
-
-            console.log(playRound(playerSelection, computerSelection));
-        });
-    }
-}
 
 // Function to play a round of the game
 function playRound(playerChoice, computerChoice) {
     // Variables to keep track of the player and computer scores
     let playerScore = document.querySelector('.player-score');
     let computerScore = document.querySelector('.computer-score');
-
+    
     // Check if the choices are the same, indicating a tie
     if (!playerChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
         console.log("It's a Tie!");
         return `Player Score: ${playerScore} \nComputer Score: ${computerScore}\n`; // Return a tie message
     }
-
+    
     // Define winning combinations as arrays
     const winningCombinations = [
         ["Rock", "Scissors"],
@@ -63,4 +47,21 @@ function playRound(playerChoice, computerChoice) {
         console.log("Computer Wins!");
     }
 
+}
+
+// Function to get the player's choice
+function playGame() {
+    let playerChoices = document.querySelectorAll('.action-button');
+
+    for (const playerChoice of playerChoices) {
+        playerChoice.addEventListener("click", (event) => {
+            const computerSelection = getComputerChoice();
+            const playerSelection = event.target.classList[1];
+
+            // Output both selections to the console
+            console.log(`Player: ${playerSelection} \nComputer: ${computerSelection}`);
+
+            console.log(playRound(playerSelection, computerSelection));
+        });
+    }
 }
