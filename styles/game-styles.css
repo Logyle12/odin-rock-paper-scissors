@@ -80,6 +80,10 @@ body {
     z-index: 2;
 }
 
+.action-button:hover {
+    box-shadow: rgba(255, 255, 255, 0.05) 0px -4px 0px 25px;
+}
+
 .path {
     width: 320px;
     height: 250px;
