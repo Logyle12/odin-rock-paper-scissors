@@ -162,6 +162,11 @@ body {
     transition: all 0.25s 0.05s ease-in;
  }
 
+ .rounds-display {
+    display: none;
+ }
+
+
 
 
 
