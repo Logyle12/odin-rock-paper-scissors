@@ -171,6 +171,7 @@ body {
     padding: 24px;
     max-width: 1200px;
     max-height: 140px;
+    overflow: auto;
  }
 
 
