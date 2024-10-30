@@ -226,6 +226,10 @@ function playGame() {
         playerChoice.addEventListener("click", (event) => {
             const computerSelection = getComputerChoice();
             const playerSelection = event.target.classList[1];
+            const playerResult = document.createElement('img');
+            const computerResult = document.createElement('img');
+            playerResult.classList.add('player');
+            computerResult.classList.add('computer');
 
             // Output both selections to the console
             console.log(`Player: ${playerSelection} \nComputer: ${computerSelection}`);
