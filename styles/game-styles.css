@@ -169,6 +169,8 @@ body {
     justify-content: center;
     gap: 40px 32px;
     padding: 24px;
+    max-width: 1200px;
+    max-height: 140px;
  }
 
 
