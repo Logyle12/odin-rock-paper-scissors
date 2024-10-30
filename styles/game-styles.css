@@ -172,6 +172,7 @@ body {
     max-width: 1200px;
     max-height: 140px;
     overflow: auto;
+    scrollbar-color: #304f7796 #131537;
  }
 
 
