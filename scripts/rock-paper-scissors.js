@@ -235,7 +235,8 @@ function playGame() {
             // Output both selections to the console
             console.log(`Player: ${playerSelection} \nComputer: ${computerSelection}`);
 
-            console.log(playRound(playerSelection, computerSelection));
+            const winResult = playRound(playerSelection, computerSelection, roundRecord);
+            console.log(winResult);
         });
     }
 }
