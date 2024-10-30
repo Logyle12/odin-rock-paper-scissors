@@ -126,6 +126,14 @@ body {
     font-size: 32px;
  }
 
+ .outcome-display {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+ }
+
 
 
 
