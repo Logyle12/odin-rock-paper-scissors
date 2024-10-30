@@ -182,6 +182,7 @@ function playRound(playerChoice, computerChoice) {
     // Select score elements to update player and computer scores
     const playerScore = document.querySelector('.player-score');
     const computerScore = document.querySelector('.computer-score');
+    let winResult; // Store the outcome message of the round
     
     // Check if the choices are the same, indicating a tie
     if (!playerChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
