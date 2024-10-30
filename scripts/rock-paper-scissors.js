@@ -154,6 +154,10 @@ function showRoundResults(playerSelection, computerSelection, roundsContainer, r
     const computerChoiceDiv = createChoiceDisplay(computerSelection, 'computer-choice');
     resultsSection.appendChild(computerChoiceDiv);
 
+    // Replace game action section with results display
+    gameActionsSection.remove();
+    gameContainer.insertBefore(resultsSection, roundsDisplay);
+
 }
 
 
