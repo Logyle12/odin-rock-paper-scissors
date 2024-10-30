@@ -112,6 +112,8 @@ function addRoundResult(roundOutcome, roundsContainer) {
     } else {
         roundsContainer.appendChild(roundOutcome);
     }
+
+    roundsDisplay.appendChild(roundsContainer);
 }
 
 // Increment the score by 1 and update the displayed text content
