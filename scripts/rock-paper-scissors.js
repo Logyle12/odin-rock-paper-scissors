@@ -160,7 +160,9 @@ function showRoundResults(playerSelection, computerSelection, roundsContainer, r
 
     // Set up play again event listener
     handleNextAction(actionLink, resultsSection);
-    
+
+    // Record the round
+    updateRoundSelections(playerSelection, computerSelection, roundsContainer);
 
 }
 
