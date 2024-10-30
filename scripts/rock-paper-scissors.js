@@ -181,6 +181,9 @@ function playRound(playerChoice, computerChoice) {
     const playerScore = document.querySelector('.player-score');
     const computerScore = document.querySelector('.computer-score');
     let winResult; // Store the outcome message of the round
+
+    // Make the round display visible
+    roundsDisplay.style["display"] = "flex";
     
     // Check if the choices are the same, indicating a tie
     if (!playerChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
