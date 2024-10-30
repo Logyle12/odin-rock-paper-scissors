@@ -31,6 +31,13 @@ function createChoiceDisplay(selection, choiceClass) {
     titleElement.textContent = "YOU PICKED";
     imageElement.src = `../assets/${selection}.png`;
 
+    // Append the title and image elements to the container
+    choiceContainer.appendChild(titleElement);
+    choiceContainer.appendChild(imageElement);
+
+    // Return the fully constructed choice display element
+    return choiceContainer;
+
 }
 
 
