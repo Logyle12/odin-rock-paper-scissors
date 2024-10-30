@@ -100,6 +100,8 @@ function handleNextAction(actionButton, resultsContainer) {
 // Function to add the result of a round to the rounds container
 function addRoundResult(roundOutcome, roundsContainer) {
     const arrowIcon = document.createElement('img');
+    arrowIcon.classList.add('arrow');
+    arrowIcon.src = "../assets/arrow.png";
 }
 
 // Increment the score by 1 and update the displayed text content
