@@ -135,6 +135,12 @@ function updateRoundSelections(playerSelection, computerSelection, roundsContain
     }
 }
 
+// Function to display the results for each round of the game
+function showRoundResults(playerSelection, computerSelection, roundsContainer, roundOutcome) {
+
+}
+
+
 
 // Increment the score by 1 and update the displayed text content
 function incrementScore(score) {
