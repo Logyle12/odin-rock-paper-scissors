@@ -143,6 +143,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 220px;
+    height: 48px;
  }
 
 
