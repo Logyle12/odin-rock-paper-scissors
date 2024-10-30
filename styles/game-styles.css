@@ -79,6 +79,9 @@ body {
     width: 208px;
     height: 213px;
     z-index: 2;
+    transition: background-color 0.30s 0.05s ease-in, 
+                box-shadow 0.30s 0.05s ease-in,
+                transform 0.30s 0.05s ease-in;
 }
 
 .action-button:hover {
