@@ -132,6 +132,7 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
+    row-gap: 32px;
  }
 
 
