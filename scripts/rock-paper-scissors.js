@@ -228,6 +228,7 @@ function playGame() {
             const playerSelection = event.target.classList[1];
             const playerResult = document.createElement('img');
             const computerResult = document.createElement('img');
+            const roundsContainer = document.createElement('div');
             playerResult.classList.add('player');
             computerResult.classList.add('computer');
 
