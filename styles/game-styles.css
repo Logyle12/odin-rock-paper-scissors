@@ -114,7 +114,9 @@ body {
  .choice-container {
     display: flex;
     align-items: baseline;
-    justify-content: center;;
+    justify-content: center;
+    width: 293px;
+    height: 375px;
  }
 
 
