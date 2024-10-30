@@ -116,6 +116,12 @@ function addRoundResult(roundOutcome, roundsContainer) {
     roundsDisplay.appendChild(roundsContainer);
 }
 
+// Function to update the history of selections made in each round
+function updateRoundSelections(playerSelection, computerSelection, roundsContainer) {
+    
+}
+
+
 // Increment the score by 1 and update the displayed text content
 function incrementScore(score) {
     score.textContent = parseInt(score.textContent) + 1;
