@@ -145,6 +145,8 @@ body {
     align-items: center;
     width: 220px;
     height: 48px;
+    border-radius: 12px;
+    font-size: 18px;
  }
 
 
