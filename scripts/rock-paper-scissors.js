@@ -118,7 +118,18 @@ function addRoundResult(roundOutcome, roundsContainer) {
 
 // Function to update the history of selections made in each round
 function updateRoundSelections(playerSelection, computerSelection, roundsContainer) {
-    
+    const roundResults = roundsContainer.querySelectorAll(".round-result");
+
+    for (const roundResult of roundResults) {   
+        console.log(roundResult);
+        if (roundResult.classList.contains('player')) {
+            roundResult.src = `../assets/${playerSelection}.png`;
+            roundResult.alt = playerSelection;
+        } else {
+            roundResult.src = `../assets/${computerSelection}.png`;
+            roundResult.alt = computerSelection;
+        }
+    }
 }
 
 
