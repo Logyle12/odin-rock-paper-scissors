@@ -28,7 +28,7 @@ body {
     justify-content: space-between;
     width: 700px;
     margin-top: 48px;
-    border: 2px solid #b9b8c262;
+    border: 2px solid rgba(185, 184, 194, 0.384);
     border-radius: 15px;
     padding: 20px;
     line-height: 1.15;
