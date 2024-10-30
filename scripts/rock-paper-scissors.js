@@ -187,7 +187,8 @@ function playRound(playerChoice, computerChoice) {
     // Check if the choices are the same, indicating a tie
     if (!playerChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
         console.log("It's a Tie!"); 
-        return `Player Score: ${playerScore.textContent} \nComputer Score: ${computerScore.textContent}\n`; 
+        winResult = "YOU DREW"; // Outcome message for a tie
+        return winResult; 
     }
     
     // Define winning combinations as arrays
@@ -206,14 +207,15 @@ function playRound(playerChoice, computerChoice) {
     if (playerWins) {
         incrementScore(playerScore);
         console.log("Player Wins!");
+        winResult = "YOU WIN!"; // Outcome message if the player wins
+        return winResult;
     } else {
         incrementScore(computerScore);
         console.log("Computer Wins!");
+        winResult = "YOU LOSE"; // Outcome message if the computer wins
+        return winResult;
     }
     
-    // Return the current scores for the player and computer after determining the round outcome
-    return `Player Score: ${playerScore.textContent} \nComputer Score: ${computerScore.textContent}\n`; 
-
 }
 
 // Function to get the player's choice
