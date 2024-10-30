@@ -190,8 +190,8 @@ function playRound(playerChoice, computerChoice, roundsContainer) {
     if (!playerChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
         console.log("It's a Tie!"); 
         console.log(scoreSummary);
-        roundsRecord.style["border"] = "1px solid rgba(119, 119, 119, 0.284)";
-        roundsRecord.style["background-color"] = "rgba(119, 119, 119, 0.284)";
+        roundsContainer.style["border"] = "1px solid rgba(119, 119, 119, 0.284)";
+        roundsContainer.style["background-color"] = "rgba(119, 119, 119, 0.284)";
         winResult = "YOU DREW"; // Outcome message for a tie
         return winResult; 
     }
@@ -213,16 +213,16 @@ function playRound(playerChoice, computerChoice, roundsContainer) {
         incrementScore(playerScore);
         console.log("Player Wins!");
         console.log(scoreSummary);
-        roundsRecord.style["border"] = "1px solid rgba(49, 95, 49, 0.466)";
-        roundsRecord.style["background-color"] = "rgba(49, 95, 49, 0.466)";
+        roundsContainer.style["border"] = "1px solid rgba(49, 95, 49, 0.466)";
+        roundsContainer.style["background-color"] = "rgba(49, 95, 49, 0.466)";
         winResult = "YOU WIN!"; // Outcome message if the player wins
         return winResult;
     } else {
         incrementScore(computerScore);
         console.log("Computer Wins!");
         console.log(scoreSummary);
-        roundsRecord.style["border"] = "1px solid rgba(108, 49, 49, 0.466)";
-        roundsRecord.style["background-color"] = "rgba(108, 49, 49, 0.466)";
+        roundsContainer.style["border"] = "1px solid rgba(108, 49, 49, 0.466)";
+        roundsContainer.style["background-color"] = "rgba(108, 49, 49, 0.466)";
         winResult = "YOU LOSE"; // Outcome message if the computer wins
         return winResult;
     }
