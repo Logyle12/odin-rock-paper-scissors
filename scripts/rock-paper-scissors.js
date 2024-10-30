@@ -147,6 +147,7 @@ function showRoundResults(playerSelection, computerSelection, roundsContainer, r
     // Create win result display and access using index
     const outcomeArray = showRoundOutcome(roundOutcome);
     const outcomeDisplay = outcomeArray[0];
+    const actionLink = outcomeArray[1];
     resultsSection.appendChild(outcomeDisplay);
 
 }
