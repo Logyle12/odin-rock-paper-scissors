@@ -158,6 +158,10 @@ function showRoundResults(playerSelection, computerSelection, roundsContainer, r
     gameActionsSection.remove();
     gameContainer.insertBefore(resultsSection, roundsDisplay);
 
+    // Set up play again event listener
+    handleNextAction(actionLink, resultsSection);
+    
+
 }
 
 
