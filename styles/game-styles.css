@@ -175,6 +175,12 @@ body {
     scrollbar-color: #304f7796 #131537;
  }
 
+ .rounds-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+
 
 
 
