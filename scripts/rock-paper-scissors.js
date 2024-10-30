@@ -233,7 +233,7 @@ function playGame() {
             // Output both selections to the console
             console.log(`Player: ${playerSelection} \nComputer: ${computerSelection}`);
 
-            const winResult = playRound(playerSelection, computerSelection, roundRecord);
+            const winResult = playRound(playerSelection, computerSelection, roundsContainer);
             console.log(winResult);
 
              // Record and display the results for the current round
