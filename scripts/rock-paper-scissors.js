@@ -1,7 +1,7 @@
 // Function to randomly select the computer's choice in the game
 function getComputerChoice() {
     // Generate a random number between 0 and 2
-    let computerChoice = Math.round(Math.random() * 2);
+    const computerChoice = Math.round(Math.random() * 2);
 
     // Map the random number to the corresponding choice
     if (computerChoice == 0) {
@@ -22,9 +22,9 @@ function incrementScore(score) {
 
 // Function to play a round of the game
 function playRound(playerChoice, computerChoice) {
-    // Variables to keep track of the player and computer scores
-    let playerScore = document.querySelector('.player-score');
-    let computerScore = document.querySelector('.computer-score');
+    // Select score elements to update player and computer scores
+    const playerScore = document.querySelector('.player-score');
+    const computerScore = document.querySelector('.computer-score');
     
     // Check if the choices are the same, indicating a tie
     if (!playerChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
@@ -60,7 +60,7 @@ function playRound(playerChoice, computerChoice) {
 
 // Function to get the player's choice
 function playGame() {
-    let playerChoices = document.querySelectorAll('.action-button');
+    const playerChoices = document.querySelectorAll('.action-button');
 
     for (const playerChoice of playerChoices) {
         playerChoice.addEventListener("click", (event) => {
