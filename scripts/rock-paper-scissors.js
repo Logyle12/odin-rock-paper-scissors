@@ -15,6 +15,16 @@ function getComputerChoice() {
     }
 }
 
+// Function to create and display the choice for a player or computer
+function createChoiceDisplay(selection, choiceClass) {
+    // Create a container to display the choice, including the title and the corresponding image
+    const choiceContainer = document.createElement('div');
+    const titleElement = document.createElement('h2');
+    const imageElement = document.createElement('img');
+
+}
+
+
 // Increment the score by 1 and update the displayed text content
 function incrementScore(score) {
     score.textContent = parseInt(score.textContent) + 1;
