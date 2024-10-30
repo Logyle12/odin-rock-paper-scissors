@@ -150,6 +150,10 @@ function showRoundResults(playerSelection, computerSelection, roundsContainer, r
     const actionLink = outcomeArray[1];
     resultsSection.appendChild(outcomeDisplay);
 
+    // Create computer choice display
+    const computerChoiceDiv = createChoiceDisplay(computerSelection, 'computer-choice');
+    resultsSection.appendChild(computerChoiceDiv);
+
 }
 
 
