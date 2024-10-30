@@ -64,6 +64,13 @@ function showRoundOutcome(outcomeText) {
     return [outcomeContainer, nextRoundLink];
 }
 
+// Function to handle the next action based on current game state
+function handleNextAction(actionButton, resultsContainer) {
+    // Select all elements that display score values from the DOM
+    const scoreElements = document.querySelectorAll('.score-value');
+
+}
+
 // Increment the score by 1 and update the displayed text content
 function incrementScore(score) {
     score.textContent = parseInt(score.textContent) + 1;
