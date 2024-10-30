@@ -1,3 +1,7 @@
+const gameActionsSection = document.querySelector('.game-actions'); // Selects the section containing game action buttons.
+const gameContainer = document.querySelector('.game-container'); // Selects the main container for the game UI.
+const roundsDisplay = document.querySelector('.rounds-display'); // Selects the element that tracks the current round of the game.
+
 // Function to randomly select the computer's choice in the game
 function getComputerChoice() {
     // Generate a random number between 0 and 2
