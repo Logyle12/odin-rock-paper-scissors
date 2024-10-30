@@ -79,6 +79,22 @@ function handleNextAction(actionButton, resultsContainer) {
             actionButton.textContent = "PLAY AGAIN";
         }
     }
+
+    // Add an event listener to the provided action button that triggers after a delay
+    actionButton.addEventListener("click", () => {
+        if (actionButton.textContent === "PLAY AGAIN") {
+            // Reload the page to reset the game state if new game
+            location.reload();
+        } else {
+            // If the game is not over, prepare for the next round
+            // Apply a 150ms delay before executing the callback function
+            setTimeout(() => {
+                roundsDisplay.style.display = "none";
+                resultsContainer.remove();
+                gameContainer.insertBefore(gameActionsSection, roundsDisplay);
+            }, 150);
+        }
+    });
 }
 
 // Increment the score by 1 and update the displayed text content
