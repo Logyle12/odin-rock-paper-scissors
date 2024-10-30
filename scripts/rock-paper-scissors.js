@@ -180,6 +180,7 @@ function playRound(playerChoice, computerChoice, roundsContainer) {
     // Select score elements to update player and computer scores
     const playerScore = document.querySelector('.player-score');
     const computerScore = document.querySelector('.computer-score');
+    const scoreSummary = `Player Score: ${playerScore.textContent} \nComputer Score: ${computerScore.textContent}\n`;
     let winResult; // Store the outcome message of the round
 
     // Make the round display visible
@@ -188,6 +189,7 @@ function playRound(playerChoice, computerChoice, roundsContainer) {
     // Check if the choices are the same, indicating a tie
     if (!playerChoice.localeCompare(computerChoice, undefined, {sensitivity: 'base'})) {
         console.log("It's a Tie!"); 
+        console.log(scoreSummary);
         roundsRecord.style["border"] = "1px solid rgba(119, 119, 119, 0.284)";
         roundsRecord.style["background-color"] = "rgba(119, 119, 119, 0.284)";
         winResult = "YOU DREW"; // Outcome message for a tie
@@ -210,6 +212,7 @@ function playRound(playerChoice, computerChoice, roundsContainer) {
     if (playerWins) {
         incrementScore(playerScore);
         console.log("Player Wins!");
+        console.log(scoreSummary);
         roundsRecord.style["border"] = "1px solid rgba(49, 95, 49, 0.466)";
         roundsRecord.style["background-color"] = "rgba(49, 95, 49, 0.466)";
         winResult = "YOU WIN!"; // Outcome message if the player wins
@@ -217,6 +220,7 @@ function playRound(playerChoice, computerChoice, roundsContainer) {
     } else {
         incrementScore(computerScore);
         console.log("Computer Wins!");
+        console.log(scoreSummary);
         roundsRecord.style["border"] = "1px solid rgba(108, 49, 49, 0.466)";
         roundsRecord.style["background-color"] = "rgba(108, 49, 49, 0.466)";
         winResult = "YOU LOSE"; // Outcome message if the computer wins
