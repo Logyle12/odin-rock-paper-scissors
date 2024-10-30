@@ -168,9 +168,7 @@ function showRoundResults(playerSelection, computerSelection, roundsContainer, r
     // Record the round
     updateRoundSelections(playerSelection, computerSelection, roundsContainer);
 
-}
-
-
+} 
 
 // Increment the score by 1 and update the displayed text content
 function incrementScore(score) {
@@ -237,6 +235,10 @@ function playGame() {
 
             const winResult = playRound(playerSelection, computerSelection, roundRecord);
             console.log(winResult);
+
+            addRoundResult(playerResult, roundsContainer);
+            addRoundResult(computerResult, roundsContainer);
+
         });
     }
 }
