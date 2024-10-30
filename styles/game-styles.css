@@ -97,6 +97,17 @@ body {
     position: absolute;
 }
 
+/* 
+ * Styles tailored for dynamically generated DOM elements 
+ * created through JavaScript, enhancing the display of 
+ * game results, player selections, and interactive actions. 
+ */
+
+ .results-display {
+    display: flex;
+    align-items: center;
+
+ }
 
 
 
