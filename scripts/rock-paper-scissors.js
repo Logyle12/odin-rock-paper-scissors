@@ -176,7 +176,7 @@ function incrementScore(score) {
 }
 
 // Function to play a round of the game
-function playRound(playerChoice, computerChoice) {
+function playRound(playerChoice, computerChoice, roundsContainer) {
     // Select score elements to update player and computer scores
     const playerScore = document.querySelector('.player-score');
     const computerScore = document.querySelector('.computer-score');
