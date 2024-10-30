@@ -69,6 +69,16 @@ function handleNextAction(actionButton, resultsContainer) {
     // Select all elements that display score values from the DOM
     const scoreElements = document.querySelectorAll('.score-value');
 
+    // Iterate over each score element
+    for (const scoreElement of scoreElements) {
+        console.log(`Score Value: ${scoreElement.textContent}`); // Log the current score value (for debugging purposes)
+
+        // Check if the score has reached 5, indicating the game is over
+        if (scoreElement.textContent === "5") {
+            // Change the action button text to prompt a new game
+            actionButton.textContent = "PLAY AGAIN";
+        }
+    }
 }
 
 // Increment the score by 1 and update the displayed text content
