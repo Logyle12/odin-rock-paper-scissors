@@ -144,6 +144,10 @@ function showRoundResults(playerSelection, computerSelection, roundsContainer, r
     const playerChoiceDiv = createChoiceDisplay(playerSelection, 'player-choice');
     resultsSection.appendChild(playerChoiceDiv);
 
+    // Create win result display and access using index
+    const outcomeArray = showRoundOutcome(roundOutcome);
+    const outcomeDisplay = outcomeArray[0];
+    resultsSection.appendChild(outcomeDisplay);
 
 }
 
