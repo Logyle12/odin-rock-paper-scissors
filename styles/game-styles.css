@@ -118,6 +118,7 @@ body {
     justify-content: center;
     width: 293px;
     height: 375px;
+    row-gap: 48px;
  }
 
 
