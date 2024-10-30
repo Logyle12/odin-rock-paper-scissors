@@ -129,6 +129,9 @@ function updateRoundSelections(playerSelection, computerSelection, roundsContain
             roundResult.src = `../assets/${computerSelection}.png`;
             roundResult.alt = computerSelection;
         }
+
+        // Scroll into view to focus on the last round’s result
+        roundResult.scrollIntoView();
     }
 }
 
