@@ -140,6 +140,10 @@ function showRoundResults(playerSelection, computerSelection, roundsContainer, r
     const resultsSection = document.createElement('section');
     resultsSection.classList.add('results-display');
 
+    // Create player choice display
+    const playerChoiceDiv = createChoiceDisplay(playerSelection, 'player-choice');
+    resultsSection.appendChild(playerChoiceDiv);
+
 
 }
 
