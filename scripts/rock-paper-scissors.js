@@ -27,6 +27,10 @@ function createChoiceDisplay(selection, choiceClass) {
     titleElement.classList.add(`${choiceClass}-title`);
     imageElement.classList.add(`${choiceClass}-image`);
 
+    // Set the title to "YOU PICKED" and the image source based on the player's choice
+    titleElement.textContent = "YOU PICKED";
+    imageElement.src = `../assets/${selection}.png`;
+
 }
 
 
