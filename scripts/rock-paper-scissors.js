@@ -236,8 +236,10 @@ function playGame() {
             const winResult = playRound(playerSelection, computerSelection, roundRecord);
             console.log(winResult);
 
+             // Record and display the results for the current round
             addRoundResult(playerResult, roundsContainer);
             addRoundResult(computerResult, roundsContainer);
+            showRoundResults(playerSelection, computerSelection, roundsContainer, winResult);
 
         });
     }
