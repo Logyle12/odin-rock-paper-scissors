@@ -102,6 +102,16 @@ function addRoundResult(roundOutcome, roundsContainer) {
     const arrowIcon = document.createElement('img');
     arrowIcon.classList.add('arrow');
     arrowIcon.src = "../assets/arrow.png";
+    roundsContainer.classList.add('rounds-container');
+    roundOutcome.classList.add('round-result');
+
+    // Append or insert round result based on player or computer choice
+    if (roundOutcome.classList.contains('player')) {
+        roundsContainer.appendChild(arrowIcon);
+        roundsContainer.insertBefore(roundOutcome, arrowIcon);
+    } else {
+        roundsContainer.appendChild(roundOutcome);
+    }
 }
 
 // Increment the score by 1 and update the displayed text content
