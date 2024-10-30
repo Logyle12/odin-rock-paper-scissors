@@ -139,6 +139,12 @@ body {
     font-size: 58px;
  }
 
+ .next-round-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
 
 
 
