@@ -40,6 +40,14 @@ function createChoiceDisplay(selection, choiceClass) {
 
 }
 
+// Function to display the outcome of the round and provide a "Next Round" option
+function showRoundOutcome(outcomeText) {
+    // Create a container to display the round result and a "Next Round" link
+    const outcomeContainer = document.createElement('div');
+    const outcomeTitle = document.createElement('h2');
+    const nextRoundLink = document.createElement('a');
+
+}
 
 // Increment the score by 1 and update the displayed text content
 function incrementScore(score) {
