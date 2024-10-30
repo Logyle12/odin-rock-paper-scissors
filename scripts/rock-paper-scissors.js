@@ -9,13 +9,13 @@ function getComputerChoice() {
 
     // Map the random number to the corresponding choice
     if (computerChoice == 0) {
-        return "Rock"; // Return "Rock" for 0
+        return "rock"; // Return "Rock" for 0
     }
     else if (computerChoice == 1) {
-        return "Paper"; // Return "Paper" for 1
+        return "paper"; // Return "Paper" for 1
     }
     else {
-        return "Scissors"; // Return "Scissors" for 2
+        return "scissors"; // Return "Scissors" for 2
     }
 }
 
