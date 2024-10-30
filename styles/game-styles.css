@@ -111,6 +111,11 @@ body {
     column-gap: 100px;
  }
 
+ .choice-container {
+    display: flex;
+    justify-content: center;
+ }
+
 
 
 
