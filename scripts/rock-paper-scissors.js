@@ -22,6 +22,11 @@ function createChoiceDisplay(selection, choiceClass) {
     const titleElement = document.createElement('h2');
     const imageElement = document.createElement('img');
 
+    // Add CSS classes for styling the choice display
+    choiceContainer.classList.add(choiceClass, 'choice-container');
+    titleElement.classList.add(`${choiceClass}-title`);
+    imageElement.classList.add(`${choiceClass}-image`);
+
 }
 
 
