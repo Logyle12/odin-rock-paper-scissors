@@ -47,6 +47,11 @@ function showRoundOutcome(outcomeText) {
     const outcomeTitle = document.createElement('h2');
     const nextRoundLink = document.createElement('a');
 
+    // Add CSS classes to style the outcome display and the "Next Round" link
+    outcomeContainer.classList.add('outcome-display');
+    outcomeTitle.classList.add('outcome-title');
+    nextRoundLink.classList.add('next-round-link');
+
 }
 
 // Increment the score by 1 and update the displayed text content
