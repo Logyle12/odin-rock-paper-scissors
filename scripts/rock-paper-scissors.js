@@ -97,6 +97,11 @@ function handleNextAction(actionButton, resultsContainer) {
     });
 }
 
+// Function to add the result of a round to the rounds container
+function addRoundResult(roundOutcome, roundsContainer) {
+    const arrowIcon = document.createElement('img');
+}
+
 // Increment the score by 1 and update the displayed text content
 function incrementScore(score) {
     score.textContent = parseInt(score.textContent) + 1;
