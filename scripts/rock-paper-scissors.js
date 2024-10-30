@@ -137,6 +137,9 @@ function updateRoundSelections(playerSelection, computerSelection, roundsContain
 
 // Function to display the results for each round of the game
 function showRoundResults(playerSelection, computerSelection, roundsContainer, roundOutcome) {
+    const resultsSection = document.createElement('section');
+    resultsSection.classList.add('results-display');
+
 
 }
 
