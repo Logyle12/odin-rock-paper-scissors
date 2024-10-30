@@ -52,6 +52,10 @@ function showRoundOutcome(outcomeText) {
     outcomeTitle.classList.add('outcome-title');
     nextRoundLink.classList.add('next-round-link');
 
+    // Set the outcome text and the text for the next action
+    outcomeTitle.textContent = outcomeText;
+    nextRoundLink.textContent = "NEXT ROUND";
+
 }
 
 // Increment the score by 1 and update the displayed text content
