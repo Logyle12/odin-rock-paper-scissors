@@ -48,9 +48,11 @@ body {
     width: 125px;
     align-items: baseline;
     justify-content: center;
-    background-color: whitesmoke;
-    border: 5px solid rgb(86, 84, 104);
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    border: 3px solid  rgba(185, 184, 194, 0.384);
+    border-radius: 12px;
 }
 
 .score-info {
