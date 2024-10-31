@@ -146,6 +146,7 @@ body {
     font-size: 58px;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 10px 20px;
+    border-radius: 12px;
 }
 
 .next-round-link {
