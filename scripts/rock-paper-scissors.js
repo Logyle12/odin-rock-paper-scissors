@@ -92,13 +92,13 @@ function handleNextAction(actionButton, resultsContainer) {
         // Check if the score has reached 5, indicating the game is over
         if (scoreElement.dataset.scoreValue === "5") {
             // Change the action button text to prompt a new game
-            actionButton.textContent = "PLAY AGAIN";
+            actionButton.textContent = "PLAY AGAIN?";
         }
     }
 
     // Add an event listener to the provided action button that triggers after a delay
     actionButton.addEventListener("click", () => {
-        if (actionButton.textContent === "PLAY AGAIN") {
+        if (actionButton.textContent === "PLAY AGAIN?") {
             // Reload the page to reset the game state if new game
             location.reload();
         } else {
