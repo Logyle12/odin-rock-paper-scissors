@@ -81,10 +81,10 @@ function handleNextAction(actionButton, resultsContainer) {
 
     // Iterate over each score element
     for (const scoreElement of scoreElements) {
-        console.log(`Score Value: ${scoreElement.textContent}`); // Log the current score value (for debugging purposes)
+        console.log(`Score Value: ${scoreElement.dataset.scoreValue}`); // Log the current score value (for debugging purposes)
 
         // Check if the score has reached 5, indicating the game is over
-        if (scoreElement.textContent === "5") {
+        if (scoreElement.dataset.scoreValue === "5") {
             // Change the action button text to prompt a new game
             actionButton.textContent = "PLAY AGAIN";
         }
@@ -178,15 +178,32 @@ function showRoundResults(playerSelection, computerSelection, roundsContainer, r
 
 // Increment the score by 1 and update the displayed text content
 function incrementScore(score) {
-    score.textContent = parseInt(score.textContent) + 1;
+    // Retrieve the current score from the custom data attribute
+    let currentScore = score.getAttribute('data-score-value');
+    
+    // Convert the current score to an integer and increment it by 1
+    currentScore = parseInt(currentScore) + 1;
+
+    // Log the current score and the score after incrementing
+    console.log(`Current Score: ${currentScore}`);
+    console.log(`Current Score After Increment: ${currentScore}`);
+
+    // Update the custom data attribute with the new score value
+    score.setAttribute('data-score-value', `${currentScore}`);
+
+    // Delay the update of the displayed text content by 1 second
+    setTimeout(() => {
+         score.textContent = currentScore; // Update the visible score
+    }, 1000);   
 }
+
 
 // Function to play a round of the game
 function playRound(playerChoice, computerChoice, roundsContainer) {
     // Select score elements to update player and computer scores
     const playerScore = document.querySelector('.player-score');
     const computerScore = document.querySelector('.computer-score');
-    const scoreSummary = `Player Score: ${playerScore.textContent} \nComputer Score: ${computerScore.textContent}\n`;
+    const scoreSummary = `Player Score: ${playerScore.dataset.scoreValue} \nComputer Score: ${computerScore.dataset.scoreValue}\n`;
     let winResult; // Store the outcome message of the round
 
     // Make the round display visible
