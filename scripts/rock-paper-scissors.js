@@ -41,7 +41,7 @@ function createChoiceDisplay(selection, className) {
     else {
         titleElement.textContent = "COMPUTER PICKED";
     }
-    imageElement.src = `../assets/${selection}.png`;
+    imageElement.src = `assets/${selection}.png`;
 
     // Append the title and image elements to the container
     choiceContainer.appendChild(titleElement);
@@ -131,7 +131,7 @@ function handleNextAction(actionButton, resultsContainer) {
 function addRoundResult(roundOutcome, roundsContainer) {
     const arrowIcon = document.createElement('img');
     arrowIcon.classList.add('arrow');
-    arrowIcon.src = "../assets/arrow.png";
+    arrowIcon.src = "assets/arrow.png";
     roundsContainer.classList.add('rounds-container');
     roundOutcome.classList.add('round-result');
 
@@ -153,10 +153,10 @@ function updateRoundSelections(playerSelection, computerSelection, roundsContain
     for (const roundResult of roundResults) {   
         console.log(roundResult);
         if (roundResult.classList.contains('player')) {
-            roundResult.src = `../assets/${playerSelection}.png`;
+            roundResult.src = `assets/${playerSelection}.png`;
             roundResult.alt = playerSelection;
         } else {
-            roundResult.src = `../assets/${computerSelection}.png`;
+            roundResult.src = `assets/${computerSelection}.png`;
             roundResult.alt = computerSelection;
         }
 
