@@ -135,7 +135,8 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    row-gap: 32px;
+    row-gap: 36px;
+    margin-top: 80px;
 }
 
 .round-label {
