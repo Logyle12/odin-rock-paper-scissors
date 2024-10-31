@@ -103,15 +103,15 @@ body {
  * game results, player selections, and interactive actions. 
  */
 
- .results-display {
+.results-display {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 88px 0px 16px;
     column-gap: 100px;
- }
+}
 
- .choice-container {
+.choice-container {
     display: flex;
     flex-wrap: wrap;
     align-items: baseline;
@@ -119,27 +119,31 @@ body {
     width: 293px;
     height: 375px;
     row-gap: 48px;
- }
+}
 
- .choice-container h2 {
+.choice-container h2 {
     text-align: center;
     font-size: 32px;
- }
+}
 
- .outcome-display {
+.outcome-display {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     align-items: center;
     row-gap: 32px;
- }
+}
 
- .outcome-title {
+.round-label {
+    font-size: 28px;
+}
+
+.outcome-title {
     font-size: 58px;
- }
+}
 
- .next-round-link {
+.next-round-link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,16 +157,16 @@ body {
     transition: color 0.25s 0.40s ease-in, 
                 background-color 0.6s 0.05s ease-in, 
                 box-shadow 0.6s 0.05s ease-in;
- }
+}
 
- .next-round-link:hover {
+.next-round-link:hover {
     color: #FFFFFF;
     background-color: #131537;
     box-shadow: 0px 0px 0px 25px rgba(255, 255, 255, 0.05);
     transition: all 0.25s 0.05s ease-in;
- }
+}
 
- .rounds-display {
+.rounds-display {
     display: none;
     flex-wrap: wrap;
     align-items: center;
@@ -174,29 +178,29 @@ body {
     transform: scale(0.65);
     overflow: auto;
     scrollbar-color: #304f7796 #131537;
- }
+}
 
- .rounds-container {
+.rounds-container {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 16px;
     padding: 15px;
- }
+}
 
- .round-result {
+.round-result {
     width: 51px;
     height: 52.25px;
     border-radius: 50%;
     opacity: 0.7;
- }
+}
 
- .arrow {
+.arrow {
     width: 31px;
     height: 32.25px;
     margin: 10px;
     opacity: 0.6;
- }
+}
 
 
 
