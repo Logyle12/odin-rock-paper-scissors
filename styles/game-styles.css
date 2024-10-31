@@ -137,6 +137,8 @@ body {
 
 .round-label {
     font-size: 28px;
+    border: 2px solid #FFFFFF;
+    border-radius: 18px;
 }
 
 .outcome-title {
