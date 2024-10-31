@@ -86,6 +86,8 @@ function handleNextAction(actionButton, resultsContainer) {
     const scoreElements = document.querySelectorAll('.score-value');
     // Select outcome title
     const outcomeTitle = document.querySelector('.outcome-title');
+    // Select outcome display
+    const outcomeDisplay = document.querySelector('.outcome-display');
 
     // Iterate over each score element
     for (const scoreElement of scoreElements) {
@@ -95,7 +97,8 @@ function handleNextAction(actionButton, resultsContainer) {
         if (scoreElement.dataset.scoreValue === "5") {
             // Change the action button text to prompt a new game
             actionButton.textContent = "PLAY AGAIN?";
-            // Adjust outcome title styling for final result emphasis
+            // Adjust outcome styling for final result emphasis
+            outcomeDisplay.style["margin-top"] = "40px";
             outcomeTitle.style["font-size"] = "38px";
             if (scoreElement.classList.contains('player-score')) {
                 outcomeTitle.textContent = "Victory Is Yours! Take A Bow Champion!" // Player Wins Message
