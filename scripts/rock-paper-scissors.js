@@ -55,12 +55,13 @@ function createChoiceDisplay(selection, className) {
 function showRoundOutcome(outcomeText) {
     // Create a container to display the current roud, round result and a link to the "Next Round"
     const outcomeContainer = document.createElement('div');
-    const roundLabel = document.createElement('p');
+    const roundLabel = document.querySelector('.game-title');
     const outcomeTitle = document.createElement('h2');
     const nextRoundLink = document.createElement('a');
 
     // Add CSS classes to style the outcome display and its child elements
     outcomeContainer.classList.add('outcome-display');
+    roundLabel.classList.remove('game-title');
     roundLabel.classList.add('round-label');
     outcomeTitle.classList.add('outcome-title');
     nextRoundLink.classList.add('next-round-link');
@@ -71,7 +72,6 @@ function showRoundOutcome(outcomeText) {
     nextRoundLink.textContent = "NEXT ROUND";
 
     // Append the round, outcome title and "Next Round" link to the outcome container
-    outcomeContainer.appendChild(roundLabel);
     outcomeContainer.appendChild(outcomeTitle);
     outcomeContainer.appendChild(nextRoundLink);
 
