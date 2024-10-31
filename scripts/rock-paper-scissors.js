@@ -42,6 +42,7 @@ function createChoiceDisplay(selection, className) {
         titleElement.textContent = "COMPUTER PICKED";
     }
     imageElement.src = `assets/${selection}.png`;
+    imageElement.alt = selection;
 
     // Append the title and image elements to the container
     choiceContainer.appendChild(titleElement);
@@ -132,6 +133,7 @@ function addRoundResult(roundOutcome, roundsContainer) {
     const arrowIcon = document.createElement('img');
     arrowIcon.classList.add('arrow');
     arrowIcon.src = "assets/arrow.png";
+    arrowIcon.alt = "arrow";
     roundsContainer.classList.add('rounds-container');
     roundOutcome.classList.add('round-result');
 
