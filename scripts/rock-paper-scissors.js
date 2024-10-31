@@ -1,6 +1,7 @@
 const gameActionsSection = document.querySelector('.game-actions'); // Selects the section containing game action buttons.
 const gameContainer = document.querySelector('.game-container'); // Selects the main container for the game UI.
 const roundsDisplay = document.querySelector('.rounds-display'); // Selects the element that tracks the current round of the game.
+let currentRound = 0;
 
 // Function to randomly select the computer's choice in the game
 function getComputerChoice() {
@@ -52,21 +53,25 @@ function createChoiceDisplay(selection, className) {
 
 // Function to display the outcome of the round and provide a "Next Round" option
 function showRoundOutcome(outcomeText) {
-    // Create a container to display the round result and a "Next Round" link
+    // Create a container to display the current roud, round result and a link to the "Next Round"
     const outcomeContainer = document.createElement('div');
+    const roundLabel = document.createElement('p');
     const outcomeTitle = document.createElement('h2');
     const nextRoundLink = document.createElement('a');
 
-    // Add CSS classes to style the outcome display and the "Next Round" link
+    // Add CSS classes to style the outcome display and its child elements
     outcomeContainer.classList.add('outcome-display');
+    roundLabel.classList.add('round-label');
     outcomeTitle.classList.add('outcome-title');
     nextRoundLink.classList.add('next-round-link');
 
-    // Set the outcome text and the text for the next action
+    // Set the outcome text and the text for the next action and round
     outcomeTitle.textContent = outcomeText;
+    roundLabel.textContent = `ROUND ${++currentRound}`;
     nextRoundLink.textContent = "NEXT ROUND";
 
-    // Append the outcome title and "Next Round" link to the outcome container
+    // Append the round, outcome title and "Next Round" link to the outcome container
+    outcomeContainer.appendChild(roundLabel);
     outcomeContainer.appendChild(outcomeTitle);
     outcomeContainer.appendChild(nextRoundLink);
 
