@@ -1,5 +1,6 @@
 const gameActionsSection = document.querySelector('.game-actions'); // Selects the section containing game action buttons.
 const gameContainer = document.querySelector('.game-container'); // Selects the main container for the game UI.
+const gameTitle = document.querySelector('.game-title'); // Selects the main header
 const roundsDisplay = document.querySelector('.rounds-display'); // Selects the element that tracks the current round of the game.
 let currentRound = 0;
 
@@ -55,13 +56,13 @@ function createChoiceDisplay(selection, className) {
 function showRoundOutcome(outcomeText) {
     // Create a container to display the current roud, round result and a link to the "Next Round"
     const outcomeContainer = document.createElement('div');
-    const roundLabel = document.querySelector('.game-title');
+    const roundLabel = gameTitle;
     const outcomeTitle = document.createElement('h2');
     const nextRoundLink = document.createElement('a');
 
     // Add CSS classes to style the outcome display and its child elements
     outcomeContainer.classList.add('outcome-display');
-    roundLabel.classList.remove('game-title');
+    roundLabel.classList.remove('game-title'); 
     roundLabel.classList.add('round-label');
     outcomeTitle.classList.add('outcome-title');
     nextRoundLink.classList.add('next-round-link');
