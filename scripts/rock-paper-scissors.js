@@ -198,7 +198,7 @@ function playRound(playerChoice, computerChoice, roundsContainer) {
         console.log(scoreSummary);
         roundsContainer.style["border"] = "1px solid rgba(119, 119, 119, 0.284)";
         roundsContainer.style["background-color"] = "rgba(119, 119, 119, 0.284)";
-        winResult = "YOU DREW"; // Outcome message for a tie
+        winResult = "DRAW"; // Outcome message for a tie
         return winResult; 
     }
     
