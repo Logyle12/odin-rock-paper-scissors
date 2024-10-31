@@ -84,6 +84,8 @@ function showRoundOutcome(outcomeText) {
 function handleNextAction(actionButton, resultsContainer) {
     // Select all elements that display score values from the DOM
     const scoreElements = document.querySelectorAll('.score-value');
+    // Select outcome title
+    const outcomeTitle = document.querySelector('.outcome-title');
 
     // Iterate over each score element
     for (const scoreElement of scoreElements) {
@@ -93,6 +95,15 @@ function handleNextAction(actionButton, resultsContainer) {
         if (scoreElement.dataset.scoreValue === "5") {
             // Change the action button text to prompt a new game
             actionButton.textContent = "PLAY AGAIN?";
+            // Adjust outcome title styling for final result emphasis
+            outcomeTitle.style["font-size"] = "38px";
+            if (scoreElement.classList.contains('player-score')) {
+                outcomeTitle.textContent = "Victory Is Yours! Take A Bow Champion!" // Player Wins Message
+            }
+
+            else {
+                outcomeTitle.textContent = "The Computer Takes This One. Time to Sharpen Up Your Skills!" // Computer Wins Message;
+            }
         }
     }
 
