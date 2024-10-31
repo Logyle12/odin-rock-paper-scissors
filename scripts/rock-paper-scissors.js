@@ -20,19 +20,25 @@ function getComputerChoice() {
 }
 
 // Function to create and display the choice for a player or computer
-function createChoiceDisplay(selection, choiceClass) {
+function createChoiceDisplay(selection, className) {
     // Create a container to display the choice, including the title and the corresponding image
     const choiceContainer = document.createElement('div');
     const titleElement = document.createElement('h2');
     const imageElement = document.createElement('img');
 
     // Add CSS classes for styling the choice display
-    choiceContainer.classList.add(choiceClass, 'choice-container');
-    titleElement.classList.add(`${choiceClass}-title`);
-    imageElement.classList.add(`${choiceClass}-image`);
+    choiceContainer.classList.add(className, 'choice-container');
+    titleElement.classList.add(`${className}-title`);
+    imageElement.classList.add(`${className}-image`);
 
     // Set the title to "YOU PICKED" and the image source based on the player's choice
-    titleElement.textContent = "YOU PICKED";
+    if (className == "player-choice") {
+        titleElement.textContent = "YOU PICKED";     
+    }
+
+    else {
+        titleElement.textContent = "COMPUTER PICKED";
+    }
     imageElement.src = `../assets/${selection}.png`;
 
     // Append the title and image elements to the container
