@@ -25,10 +25,23 @@ To start playing the game:
 
 ### Project Structure
 
-The main logic and style are split across the following files:
-- **`index.html`**: Contains the structure and layout for the game UI.
-- **`styles.css`**: Defines the visual styles for the game, including transitions and animations.
-- **`rock-paper-scissors.js`**: Contains all the game logic, including functions for generating computer choices, handling player choices, determining the outcome, and updating the UI.
+The main logic and style are split across the following files and folders:
+
+```bash
+├── index.html           # Main HTML file serving as the homepage for the game
+├── /assets              # Folder containing all images used in the game
+│   ├── image1.png
+│   ├── image2.png
+│   └── ...
+├── /fonts               # Folder containing custom fonts used in the game
+│   ├── font1.ttf
+│   ├── font2.otf
+│   └── ...
+├── /scripts             # Folder containing JavaScript files for game logic
+│   └── rock-paper-scissors.js
+└── /styles              # Folder containing CSS files for styling the game
+    └── game-styles.css  # Stylesheet defining the visual styles for the game
+```
 
 ### Key JavaScript Functions
 
